@@ -16,6 +16,35 @@
 		<header class="mui-bar mui-bar-nav">
 			<h1 class="mui-title">购物商城首页</h1>
 		</header>
+		<div class="mui-content">
+			<div class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!--支持循环，需要重复图片节点-->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#"><img src="images/4.jpg" /></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img src="images/1.jpg" /></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img src="images/2.jpg" /></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img src="images/3.jpg" /></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img src="images/4.jpg" /></a>
+					</div>
+					<!--支持循环，需要重复图片节点-->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#"><img src="images/1.jpg" /></a>
+					</div>
+				</div>
+			</div>
+			<div>
+				XXXXXXXXXXXXXXXXXXXXXXXXX
+			</div>
+		</div>
 		<nav class="mui-bar mui-bar-tab">
 			<a class="mui-tab-item mui-active" href="index.html">
 				<span class="mui-icon mui-icon-home"></span>
@@ -35,7 +64,12 @@
 					id: id,
 					url: id
 				});
-			})
+			});
+			//获得slider插件对象
+			var gallery = mui('.mui-slider');
+			gallery.slider({
+				interval: 5000 //自动轮播周期，若为0则不自动播放，默认为0；
+			});
 		</script>
 	</body>
 
